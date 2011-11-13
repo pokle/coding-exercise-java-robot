@@ -1,9 +1,5 @@
 package com.pokle.robot;
 
-import com.sun.tools.doclets.internal.toolkit.util.SourceToHTMLConverter;
-
-import java.net.NoRouteToHostException;
-
 public enum Cardinal {
 
     NORTH(0, 1), SOUTH(0, -1), EAST(1, 0), WEST(-1, 0);
@@ -18,10 +14,14 @@ public enum Cardinal {
 
     public Cardinal left() {
         switch (this) {
-            case NORTH: return WEST;
-            case WEST: return SOUTH;
-            case SOUTH: return EAST;
-            case EAST: return NORTH;
+            case NORTH:
+                return WEST;
+            case WEST:
+                return SOUTH;
+            case SOUTH:
+                return EAST;
+            case EAST:
+                return NORTH;
             default:
                 throw new IllegalStateException("Lazy programmer forgot to add a direction to left(): " + this);
         }
@@ -29,10 +29,14 @@ public enum Cardinal {
 
     public Cardinal right() {
         switch (this) {
-            case NORTH: return EAST;
-            case EAST: return SOUTH;
-            case SOUTH: return WEST;
-            case WEST: return NORTH;
+            case NORTH:
+                return EAST;
+            case EAST:
+                return SOUTH;
+            case SOUTH:
+                return WEST;
+            case WEST:
+                return NORTH;
             default:
                 throw new IllegalStateException("Lazy programmer forgot to add a direction to right(): " + this);
         }

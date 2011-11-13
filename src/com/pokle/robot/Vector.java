@@ -31,7 +31,7 @@ public class Vector {
 
     public boolean equals(Object obj) {
         if (obj instanceof Vector) {
-            Vector otherVector = (Vector)obj;
+            Vector otherVector = (Vector) obj;
             return x == otherVector.x && y == otherVector.y && direction == otherVector.direction;
         } else {
             return false;
