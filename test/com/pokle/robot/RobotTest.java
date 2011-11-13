@@ -27,6 +27,22 @@ public class RobotTest {
         assertThat(r.getVector(), not(equalTo(initialLocation)));
     }
 
+    @Test
+    public void shouldNotTurnLeftIfNotPlaced() {
+        Robot r = new Robot();
+        Vector initial = r.getVector();
+        r.left();
+        assertThat(r.getVector(), equalTo(initial));
+    }
+
+    @Test
+    public void shouldNotTurnRightIfNotPlaced() {
+        Robot r = new Robot();
+        Vector initial = r.getVector();
+        r.right();
+        assertThat(r.getVector(), equalTo(initial));
+    }
+
     private static Vector v(int x, int y, Cardinal direction) {
         return new Vector(x, y, direction);
     }
