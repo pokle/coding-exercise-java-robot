@@ -26,4 +26,15 @@ public enum Cardinal {
                 throw new IllegalStateException("Lazy programmer forgot to add a direction to left(): " + this);
         }
     }
+
+    public Cardinal right() {
+        switch (this) {
+            case NORTH: return EAST;
+            case EAST: return SOUTH;
+            case SOUTH: return WEST;
+            case WEST: return NORTH;
+            default:
+                throw new IllegalStateException("Lazy programmer forgot to add a direction to right(): " + this);
+        }
+    }
 }

@@ -22,6 +22,14 @@ public class Robot {
         return vector;
     }
 
+    public Vector right() {
+        if (vector != null) {
+            vector = vector.right();
+        }
+        return vector;
+    }
+
+
     public Vector getVector() {
         return vector;
     }

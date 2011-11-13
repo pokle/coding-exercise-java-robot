@@ -83,4 +83,31 @@ public class RobotTest {
     public void leftOfEastIsNorth() {
         assertThat(leftOf(EAST), equalTo(NORTH));
     }
+
+    private static Cardinal rightOf(Cardinal origin) {
+        Robot r = new Robot();
+        r.place(v(0, 0, origin));
+        return r.right().direction;
+    }
+
+    @Test
+    public void rightOfNorthIsEast() {
+        assertThat(rightOf(NORTH), equalTo(EAST));
+    }
+
+    @Test
+    public void rightOfEastIsSouth() {
+        assertThat(rightOf(EAST), equalTo(SOUTH));
+    }
+
+    @Test
+    public void rightOfSouthIsWest() {
+        assertThat(rightOf(SOUTH), equalTo(WEST));
+    }
+
+    @Test
+    public void rightOfWestIsNorth() {
+        assertThat(rightOf(WEST), equalTo(NORTH));
+    }
+
 }

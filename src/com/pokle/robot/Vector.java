@@ -21,6 +21,10 @@ public class Vector {
         return new Vector(x, y, direction.left());
     }
 
+    public Vector right() {
+        return new Vector(x, y, direction.right());
+    }
+
     public String toString() {
         return "Vector<" + x + "," + y + "," + direction + ">";
     }
@@ -37,4 +41,5 @@ public class Vector {
     public int hashCode() {
         return x + y + direction.hashCode();
     }
+
 }
