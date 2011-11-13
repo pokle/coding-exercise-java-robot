@@ -2,6 +2,7 @@ package com.pokle.robot;
 
 public class Robot {
 
+    private static final Bounds table = new Bounds(0,0,4,4);
     private Vector vector;
 
     public void place(Vector vector) {
@@ -10,7 +11,10 @@ public class Robot {
 
     public Vector move() {
         if (vector != null) {
-            vector = vector.move();
+            Vector proposed = vector.move();
+            if (table.contains(proposed.x, proposed.y)) {
+                vector = proposed;
+            }
         }
         return vector;
     }

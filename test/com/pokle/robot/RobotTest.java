@@ -126,4 +126,8 @@ public class RobotTest {
         assertThat(rightOf(WEST), equalTo(NORTH));
     }
 
+    @Test
+    public void mustNotFallOffTheTable() {
+        assertThat(placeAndMove(v(0,0,SOUTH)), equalTo(v(0,0,SOUTH)));
+    }
 }
