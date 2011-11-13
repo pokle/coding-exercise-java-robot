@@ -9,6 +9,17 @@ import static org.junit.Assert.assertThat;
 
 public class RobotTest {
 
+    public static Vector v(int x, int y, Direction direction) {
+        return new Vector(x, y, direction);
+    }
+
+    private static Vector placeAndMove(Vector initial) {
+        Robot r = new Robot();
+        r.place(initial);
+        r.move();
+        return r.getVector();
+    }
+
     @Test
     public void shouldNotMoveIfNotPlaced() {
         Robot r = new Robot();
@@ -35,6 +46,15 @@ public class RobotTest {
     }
 
     @Test
+    public void shouldTurnLeftIfPlaced() {
+        Robot r = new Robot();
+        r.place(v(2,2,NORTH));
+        Vector initial = r.getVector();
+        r.left();
+        assertThat(r.getVector(), not(equalTo(initial)));
+    }
+
+    @Test
     public void shouldNotTurnRightIfNotPlaced() {
         Robot r = new Robot();
         Vector initial = r.getVector();
@@ -42,15 +62,13 @@ public class RobotTest {
         assertThat(r.getVector(), equalTo(initial));
     }
 
-    static Vector v(int x, int y, Direction direction) {
-        return new Vector(x, y, direction);
-    }
-
-    private static Vector placeAndMove(Vector initial) {
+    @Test
+    public void shouldTurnRightIfPlaced() {
         Robot r = new Robot();
-        r.place(initial);
-        r.move();
-        return r.getVector();
+        r.place(v(2,2,NORTH));
+        Vector initial = r.getVector();
+        r.right();
+        assertThat(r.getVector(), not(equalTo(initial)));
     }
 
     @Test

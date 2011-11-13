@@ -13,6 +13,11 @@ public class VectorTest {
         return v(0, 0, origin).left().direction;
     }
 
+    private static Direction rightOf(Direction origin) {
+        return v(0, 0, origin).right().direction;
+    }
+
+
     @Test
     public void leftOfNorthIsWest() {
         assertThat(leftOf(NORTH), equalTo(WEST));
@@ -31,10 +36,6 @@ public class VectorTest {
     @Test
     public void leftOfEastIsNorth() {
         assertThat(leftOf(EAST), equalTo(NORTH));
-    }
-
-    private static Direction rightOf(Direction origin) {
-        return v(0, 0, origin).right().direction;
     }
 
     @Test
