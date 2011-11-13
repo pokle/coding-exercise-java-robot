@@ -1,11 +1,29 @@
 package com.pokle.robot;
 
-/**
- * Created by IntelliJ IDEA.
- * User: tushar
- * Date: 13/11/11
- * Time: 7:33 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Robot {
+
+    private Vector vector;
+
+    public void place(Vector vector) {
+        this.vector = vector;
+    }
+
+    public Vector move() {
+        if (vector != null) {
+            vector = vector.move();
+        }
+        return vector;
+    }
+
+    public Vector left() {
+        if (vector != null) {
+            vector = vector.left();
+        }
+        return vector;
+    }
+
+    public Vector getVector() {
+        return vector;
+    }
+
 }
