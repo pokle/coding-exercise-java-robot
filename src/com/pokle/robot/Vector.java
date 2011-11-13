@@ -5,9 +5,9 @@ public class Vector {
 
     public final int x;
     public final int y;
-    public final Cardinal direction;
+    public final Direction direction;
 
-    public Vector(int x, int y, Cardinal direction) {
+    public Vector(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;

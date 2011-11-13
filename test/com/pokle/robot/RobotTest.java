@@ -2,7 +2,7 @@ package com.pokle.robot;
 
 import org.junit.Test;
 
-import static com.pokle.robot.Cardinal.*;
+import static com.pokle.robot.Direction.*;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
@@ -42,7 +42,7 @@ public class RobotTest {
         assertThat(r.getVector(), equalTo(initial));
     }
 
-    private static Vector v(int x, int y, Cardinal direction) {
+    static Vector v(int x, int y, Direction direction) {
         return new Vector(x, y, direction);
     }
 
@@ -71,58 +71,6 @@ public class RobotTest {
     @Test
     public void shouldMoveWest() {
         assertThat(placeAndMove(v(1, 0, WEST)), equalTo(v(0, 0, WEST)));
-    }
-
-    private static Cardinal leftOf(Cardinal origin) {
-        Robot r = new Robot();
-        r.place(v(0, 0, origin));
-        return r.left().direction;
-    }
-
-    @Test
-    public void leftOfNorthIsWest() {
-        assertThat(leftOf(NORTH), equalTo(WEST));
-    }
-
-    @Test
-    public void leftOfWestIsSouth() {
-        assertThat(leftOf(WEST), equalTo(SOUTH));
-    }
-
-    @Test
-    public void leftOfSouthIsEast() {
-        assertThat(leftOf(SOUTH), equalTo(EAST));
-    }
-
-    @Test
-    public void leftOfEastIsNorth() {
-        assertThat(leftOf(EAST), equalTo(NORTH));
-    }
-
-    private static Cardinal rightOf(Cardinal origin) {
-        Robot r = new Robot();
-        r.place(v(0, 0, origin));
-        return r.right().direction;
-    }
-
-    @Test
-    public void rightOfNorthIsEast() {
-        assertThat(rightOf(NORTH), equalTo(EAST));
-    }
-
-    @Test
-    public void rightOfEastIsSouth() {
-        assertThat(rightOf(EAST), equalTo(SOUTH));
-    }
-
-    @Test
-    public void rightOfSouthIsWest() {
-        assertThat(rightOf(SOUTH), equalTo(WEST));
-    }
-
-    @Test
-    public void rightOfWestIsNorth() {
-        assertThat(rightOf(WEST), equalTo(NORTH));
     }
 
     @Test

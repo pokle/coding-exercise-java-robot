@@ -1,18 +1,18 @@
 package com.pokle.robot;
 
-public enum Cardinal {
+public enum Direction {
 
     NORTH(0, 1), SOUTH(0, -1), EAST(1, 0), WEST(-1, 0);
 
     public final int deltaX;
     public final int deltaY;
 
-    Cardinal(int deltaX, int deltaY) {
+    Direction(int deltaX, int deltaY) {
         this.deltaX = deltaX;
         this.deltaY = deltaY;
     }
 
-    public Cardinal left() {
+    public Direction left() {
         switch (this) {
             case NORTH:
                 return WEST;
@@ -27,7 +27,7 @@ public enum Cardinal {
         }
     }
 
-    public Cardinal right() {
+    public Direction right() {
         switch (this) {
             case NORTH:
                 return EAST;

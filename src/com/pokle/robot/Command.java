@@ -55,7 +55,7 @@ public class Command {
             if (matcher.matches()) {
                 Vector vec = new Vector(Integer.valueOf(matcher.group(1)),
                         Integer.valueOf(matcher.group(2)),
-                        Cardinal.valueOf(matcher.group(3))
+                        Direction.valueOf(matcher.group(3))
                 );
                 robot.place(vec);
             } else {

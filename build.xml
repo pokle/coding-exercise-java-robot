@@ -33,6 +33,7 @@
             <classpath location="out"/>
             <test name="com.pokle.robot.BoundsTest" todir="out/test/"/>
             <test name="com.pokle.robot.RobotTest" todir="out/test/"/>
+            <test name="com.pokle.robot.VectorTest" todir="out/test/"/>
         </junit>
     </target>
 
