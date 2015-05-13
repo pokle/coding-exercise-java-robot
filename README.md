@@ -19,3 +19,5 @@ Just a Java OO robot coding test.
     Vector<3,3,NORTH>
 
 
+----
+[My other coding exercises](https://github.com/search?q=user%3Apokle+coding-exercise)
