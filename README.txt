@@ -1,5 +1,7 @@
 # Robot
 
+[![Circle CI](https://circleci.com/gh/pokle/coding-exercise-java-robot.svg?style=svg)](https://circleci.com/gh/pokle/coding-exercise-java-robot)
+
 Just a Java OO robot coding test.
 
 ## Build & install
