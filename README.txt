@@ -1,16 +1,19 @@
-Hello!
+# Robot
 
-To build and run my solution, just run ant in this directory. You should see something like to following towards the end:
+Just a Java OO robot coding test.
 
-run:
-     [echo] Running against sample1.csv
-     [java] Simulating file: a.txt
-     [java] Vector<0,1,NORTH>
-     [java] Simulating file: b.txt
-     [java] Vector<0,0,WEST>
-     [java] Simulating file: c.txt
-     [java] Vector<3,3,NORTH>
+## Build & install
+
+    ./gradlew build installDist
+
+## Run
+
+    ./build/install/coding-exercise-java-robot/bin/coding-exercise-java-robot a.txt b.txt c.txt
+    Simulating file: a.txt
+    Vector<0,1,NORTH>
+    Simulating file: b.txt
+    Vector<0,0,WEST>
+    Simulating file: c.txt
+    Vector<3,3,NORTH>
 
 
-Cheers!
-Tushar

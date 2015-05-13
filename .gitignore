@@ -1,2 +1,4 @@
 .idea
 robot.iml
+build
+.gradle
